@@ -1,7 +1,7 @@
 cf-node-hello
 ================================================================================
 
-A "Hello World" node sample for CloudFoundry
+A "Hello World" node sample for Cloud Foundry
 
 
 
@@ -11,15 +11,15 @@ install
 After cloning this project onto your local machine, and `cd`'ing into the 
 directory, install the dependencies using `npm`, as so:
 
-    $ git clone https://github.com/pmuellr/cf-node-hello.git**
+    $ git clone https://github.com/pmuellr/cf-node-hello.git
 
-    ... git glorp here ...
+        ... git output here ...
 
     $ cd cf-node-hello
 
     $ npm install
 
-    ... npm glorp here ...
+        ... npm output here ...
 
 
 
@@ -40,7 +40,7 @@ using the default port:
     Server running at http://127.0.0.1:3000/
     
     events.js:72
-            throw er; // Unhandled 'error' event
+        throw er; // Unhandled 'error' event
                   ^
     Error: listen EADDRINUSE
         at errnoException (net.js:901:11)
@@ -64,10 +64,10 @@ You should see the same content for every URL, which will be
 
 
 
-pushing to a CloudFoundry site
+pushing to a Cloud Foundry site
 --------------------------------------------------------------------------------
 
-For more information on the basics of pushing apps, see the CloudFoundry docs:
+For more information on the basics of pushing apps, see the Cloud Foundry docs:
 
 * *[Getting Started](http://docs.cloudfoundry.com/docs/dotcom/getting-started.html)*
 * *[Key Facts About Application Deployment](http://docs.cloudfoundry.com/docs/using/deploying-apps/)*
@@ -75,7 +75,7 @@ For more information on the basics of pushing apps, see the CloudFoundry docs:
 
 Assuming you've got your `cf` command set up correctly,
 and you've set the appropriate `cf target` and are logged in via `cf login`,
-you can push the app to a CloudFoundry site using
+you can push the app to a Cloud Foundry site using
 
     cf push cf-node-hello-bob
 
@@ -86,7 +86,7 @@ used as the "name" of the app, to be used in future `cf` commands.  It will
 also be used as the subdomain of the host name for this app.  
 
 The reason `-bob` was added is that apps are somewhat globally defined, and so 
-two users won't be able to deploy the same named app within a CloudFoundry
+two users won't be able to deploy the same named app within a Cloud Foundry
 site (not quite, but *it's complicated*).  So, 
 **use a unique suffix on `cf-node-hello` for the "name"**.
 
@@ -95,8 +95,8 @@ add the `--buildpack` option, like so
 
     cf push --buildpack https://github.com/heroku/heroku-buildpack-nodejs.git cf-node-hello-bob
 
-That buildpack, in particular, is typically usable with CloudFoundry as well
-as Heroku.  The CloudFoundry buildpack is based on this one, but tends to lag
+That buildpack, in particular, is typically usable with Cloud Foundry as well
+as Heroku.  The Cloud Foundry buildpack is based on this one, but tends to lag
 in terms of releases, so the Heroku one may be better, stronger, faster.  Your
 mileage may vary.
 
@@ -111,7 +111,7 @@ The server written with node.js.  This server was adapted from the
 *[example provided in the node docs](http://nodejs.org/api/synopsis.html)*.
 
 The difference is that the port to use is determined from the environment
-variable `PORT`.  See the CloudFoundry doc
+variable `PORT`.  See the Cloud Foundry doc
 *[Cloud Foundry Environment Variables](http://docs.cloudfoundry.com/docs/using/deploying-apps/environment-variable.html)*
 for more information.
 
@@ -119,9 +119,9 @@ for more information.
 
 `.cfignore`
 
-List of file patterns that should **NOT** be uploaded to your CloudFoundry site.
+List of file patterns that should **NOT** be uploaded to your Cloud Foundry site.
 
-See the CloudFoundry doc
+See the Cloud Foundry doc
 *[Key Facts About Application Deployment](http://docs.cloudfoundry.com/docs/using/deploying-apps/)*
 for more information.
 
@@ -152,7 +152,7 @@ for more information.
 
 Used to indicate the command to start the server.
 
-See the CloudFoundry doc
+See the Cloud Foundry doc
 *[Key Facts About Application Deployment](http://docs.cloudfoundry.com/docs/using/deploying-apps/)*
 and the Heroku doc
 *[Process Types and the Procfile](https://devcenter.heroku.com/articles/procfile)*
