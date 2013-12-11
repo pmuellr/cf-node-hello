@@ -1,4 +1,4 @@
-node-hello
+cf-node-hello
 ================================================================================
 
 A "Hello World" node sample for CloudFoundry
@@ -9,9 +9,17 @@ install
 --------------------------------------------------------------------------------
 
 After cloning this project onto your local machine, and `cd`'ing into the 
-directory, install the dependencies using
+directory, install the dependencies using `npm`, as so:
 
-    npm install
+    $ git clone https://github.com/pmuellr/cf-node-hello.git**
+
+    ... git glorp here ...
+
+    $ cd cf-node-hello
+
+    $ npm install
+
+    ... npm glorp here ...
 
 
 
@@ -97,6 +105,17 @@ mileage may vary.
 files
 --------------------------------------------------------------------------------
 
+`server.js`
+
+The server written with node.js.  This server was adapted from the 
+*[example provided in the node docs](http://nodejs.org/api/synopsis.html)*.
+
+The difference is that the port to use is determined from the environment
+variable `PORT`.  See the CloudFoundry doc
+*[Cloud Foundry Environment Variables](http://docs.cloudfoundry.com/docs/using/deploying-apps/environment-variable.html)*
+for more information.
+
+---
 
 `.cfignore`
 
@@ -145,9 +164,3 @@ for more information.
 
 This file!
 
----
-
-`server.js`
-
-The server written with node.js.  This server was adapted from the 
-*[example provided in the node docs](http://nodejs.org/api/synopsis.html)*.
