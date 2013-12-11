@@ -98,7 +98,9 @@ add the `--buildpack` option, like so
 That buildpack, in particular, is typically usable with Cloud Foundry as well
 as Heroku.  The Cloud Foundry buildpack is based on this one, but tends to lag
 in terms of releases, so the Heroku one may be better, stronger, faster.  Your
-mileage may vary.
+mileage may vary.  See the Heroku blog post from 2013/12/10
+*[Announcing a new and improved Node.js Buildpack](https://blog.heroku.com/archives/2013/12/10/new-node-buildpack)*
+for more information.
 
 
 
