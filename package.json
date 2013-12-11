@@ -1,0 +1,13 @@
+{
+  "name":               "cf-node-hello",
+  "main":               "./server",
+  "description":        "CloudFoundry Hello World server in node",
+  "author":             "pmuellr",
+  "version":            "0.1.0",
+  "homepage":           "https://github.com/pmuellr/cf-node-hello",
+  "repository":         {"type": "git", "url": "git://github.com/pmuellr/cf-node-hello" },
+  "dependencies":
+    {
+      "express":        "3.4.x"
+    }
+  }
