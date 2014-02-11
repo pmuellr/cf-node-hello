@@ -1,7 +1,7 @@
 cf-node-hello
 ================================================================================
 
-A "Hello World" node sample for Cloud Foundry
+A "Hello World" node sample for Cloud Foundry.
 
 
 
