@@ -1,13 +1,21 @@
 // adapted from http://nodejs.org/api/synopsis.html
 
-var http = require("http")
+http  = require("http")
+cfenv = require("cfenv")
 
-var portString = process.env.PORT || "3000"
-var port       = parseInt(portString, 10)
+// get environmentall information for this app
+appEnv = cfenv.getAppEnv()
 
-http.createServer(function (request, response) {
+// create a server with a simple request handler
+server = http.createServer(onRequest)
+
+// start the server on the calculated port and host
+server.listen(appEnv.port, appEnv.bind, function() {
+    console.log("server starting on " + appEnv.url)
+})
+
+//-----------------------------------------------
+function onRequest(request, response) {
   response.writeHead(200, {"Content-Type": "text/plain"})
   response.end("Hello World\n")
-}).listen(port)
-
-console.log("Server running at http://127.0.0.1:" + port + "/")
+}

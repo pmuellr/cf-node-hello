@@ -1,0 +1,11 @@
+#--------------------------------------
+# change the `host` property to a
+# unique hostname on the domain you
+# are deploying to.
+#--------------------------------------
+
+applications:
+- name:    cf-node-hello
+  host:    cf-node-hello-pjm
+  memory:  128M
+  command: node server.js
