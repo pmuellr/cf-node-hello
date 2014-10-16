@@ -103,6 +103,14 @@ Standard package.json file for node packages.
 
 ---
 
+`manifest.yml`
+
+The Cloud Foundry manifest that describes properties associated with the
+deployment of this app.  For more information on manifests, see
+[Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
+
+---
+
 `Procfile`
 
 Provides compatibility with Heroku or other PaaS's that use a `Procfile`.
