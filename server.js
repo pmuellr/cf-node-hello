@@ -3,8 +3,9 @@
 http  = require("http")
 cfenv = require("cfenv")
 
-// get environmentall information for this app
-appEnv = cfenv.getAppEnv()
+// get environmental information for this app
+appEnv   = cfenv.getAppEnv()
+instance = appEnv.app.instance_index || 0
 
 // create a server with a simple request handler
 server = http.createServer(onRequest)
@@ -17,5 +18,6 @@ server.listen(appEnv.port, appEnv.bind, function() {
 //-----------------------------------------------
 function onRequest(request, response) {
   response.writeHead(200, {"Content-Type": "text/plain"})
-  response.end("Hello World\n")
+
+  response.end("Hello World [" + instance + "]\n")
 }
