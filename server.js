@@ -11,7 +11,7 @@ instance = appEnv.app.instance_index || 0
 server = http.createServer(onRequest)
 
 // start the server on the calculated port and host
-server.listen(appEnv.port, appEnv.bind, function() {
+server.listen(appEnv.port, function() {
     console.log("server starting on " + appEnv.url)
 })
 
